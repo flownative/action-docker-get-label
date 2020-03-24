@@ -23,6 +23,9 @@ jobs:
         with:
           image: flownative/php:7.4
           label: org.label-schema.version
+          registry_username: github
+          registry_password: ${{ secrets.GITHUB_BOT_TOKEN }}
+          registry_endpoint: https://docker.pkg.github.com/v2/
 
       - name: Build Docker image
         uses: flownative/action-docker-build@v1
