@@ -1,0 +1,21 @@
+name: 'Get Docker Image Label'
+description: 'Retrieves a label from a specified docker image and returns its value'
+author: 'Flownative'
+inputs:
+  image:
+    description: 'The Docker image name and tag, for example "flownative/php:7.4"'
+    required: true
+    default: ''
+  label:
+    description: 'The label identifier, for example "org.label-schema.version"'
+    required: true
+    default: ''
+outputs:
+  value:
+    description: 'The label value of the specified label, if it exists'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'package'
+  color: 'blue'
