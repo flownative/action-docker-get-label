@@ -6,6 +6,18 @@ inputs:
     description: 'The Docker image name and tag, for example "flownative/php:7.4"'
     required: true
     default: ''
+  registry_username:
+    description: 'Username for the registry'
+    required: false
+    default: ''
+  registry_password:
+    description: 'Password for the registry'
+    required: false
+    default: ''
+  registry_endpoint:
+    description: 'Endpoint of the registry. For example, `https://docker.pkg.github.com/v2/`'
+    required: false
+    default: ''
   label:
     description: 'The label identifier, for example "org.label-schema.version"'
     required: true
